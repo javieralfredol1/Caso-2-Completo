@@ -15,8 +15,10 @@ IN
 CB = pd.read_excel("Crédito Excel.xlsx")
 CB
 
-app = Dash(__name__)
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server=app.server
+
+app.title="Dashboard"
 
 app.layout = html.Div([
     html.Div([
